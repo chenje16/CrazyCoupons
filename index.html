@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script>
+	    function goTo(page) {
+	    	console.log(window.location.pathname + "/" + page);
+	    	var loc = window.location.pathname;
+	    	var dir = loc.Substring(0, loc.LastIndexOf('/'));
+	    	location.href = dir + "/" + page;
+	    	console.log(location.href);
+	    }
+ 	</script>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Sample Page!</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Hey guys I'm going to use this page to show you some elements of jquery mobile. The rest can be found here; http://demos.jquerymobile.com/1.0/docs/about/getting-started.html. I recommend looking it over, and its easy to copy and paste/use stuff!</p>
+
+		<p> Here is an example of a filter (they don't link to anything yet): </p>		
+		<ul data-role="listview" data-inset="true" data-filter="true">
+			<li><a href="#">Acura</a></li>
+			<li><a href="#">Audi</a></li>
+			<li><a href="#">BMW</a></li>
+			<li><a href="#">Cadillac</a></li>
+			<li><a href="#">Ferrari</a></li>
+		</ul>
+
+		<p> Here is a sample buton: </p>
+		<a href="#" data-role="button" data-icon="star" data-theme="a">Button</a>
+
+		<p> Now: click on the below to go to the pages we'll be working on! They'll initially be blank, just insert the static images :) </p>
+		<a href="home.html" data-role="button" data-icon="home" data-theme="e">Home</a>
+		<a href="camera.html" data-role="button" data-icon="camera" data-theme="e">Camera</a>
+		<a href="error.html" data-role="button" data-icon="alert" data-theme="e">Error</a>
+		<a href="settings.html" data-role="button" data-icon="gear" data-theme="e">Settings</a>
+		<a href="history.html" data-role="button" data-icon="bars" data-theme="e">History</a>
+		<a href="map.html" data-role="button" data-icon="location" data-theme="e">Map</a>
+		<a href="coupons.html" data-role="button" data-icon="grid" data-theme="e">Coupons</a>
+		<a href="lockscreen.html" data-role="button" data-icon="lock" data-theme="e">Lock Screen</a>
+
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>
