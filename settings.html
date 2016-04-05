@@ -6,16 +6,41 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-</head> 
+	</head> 
 <body> 
 
-<div data-role="page">
+<div data-role="page" id="home">
 
 	<div data-role="header">
-		<h1>My Title</h1>
+		<h1>Settings</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
+	<div data-role="content">
+		<div data-role="fieldcontain">
+			<label for="flip-mini">Flip switch:</label>
+				<select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+		</div>
+
+		<div data-role="fieldcontain">
+			<label for="flip-mini">Flip switch:</label>
+				<select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+		</div>
+
+		<div data-role="fieldcontain">
+			<label for="flip-mini">Flip switch:</label>
+				<select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+		</div>
+
+
 	</div><!-- /content -->
 
 </div><!-- /page -->
