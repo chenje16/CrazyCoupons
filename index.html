@@ -4,8 +4,10 @@
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
 </head> 
 <body> 
 
@@ -24,6 +26,21 @@
 			<a href="camera.html" data-role="button" data-icon="camera">Camera</a>
 		</div>		
 
+
+		<form>
+			<div class="ui-field-contain">
+	    		<label align="center" for="select-native-2">Sort By:</label>
+			    <select name="select-native-2" id="select-native-2" data-mini="true">
+			        <option value="1">Expiration Date</option>
+			        <option value="2">Food</option>
+			        <option value="3">Clothing</option>
+			        <option value="4">Produce</option>
+			    </select>
+			</div>
+		</form>
+
+
+		<br></br>
 		<ul data-role="listview" data-inset="true" data-filter="true">
 			<li><a href="#">CVS</a></li>
 			<li><a href="#">Macy's</a></li>
