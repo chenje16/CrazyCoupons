@@ -12,18 +12,17 @@
 <div data-role="page">
 
 	<div data-role="header">
-		<h1>Crazy Coupons</h1>
+		<a href="index.html" data-transition="slide" data-icon="back" class="ui-btn-right">Back</a>
+		<span class="ui-title" />
 	</div><!-- /header -->
-
-	<a href="index.html" data-role="button" data-icon="back" data-inline="true">Back</a>
 	
 	<div data-role="content">	
-		<div data-role="controlgroup">
-			<a href="history.html" data-role="button">History</a>
-			<a href="error.html" data-role="button">Error</a>
-			<a href="lockscreen.html" data-role="button">Lock Screen</a>
-			<a href="settings.html" data-role="button">Settings</a>
-		</div>		
+		<ul data-role="listview" data-inset="true">
+			<li><a href="settings.html">Settings</a></li>
+			<li><a href="history.html">History</a></li>
+			<li><a href="error.html">Error</a></li>
+			<li><a href="lockscreen.html">Lock Screen</a></li>
+		</ul>		
 	</div><!-- /content -->
 
 </div><!-- /page -->

@@ -12,14 +12,20 @@
 <div data-role="page">
 
 	<div data-role="header">
-		<h1>Map</h1>
+		<a href="index.html" data-transition="slide" data-direction="reverse" data-icon="back" class="ui-btn-left">Back</a>
+		<a href="mapinfo.html" data-transition="slide" data-icon="info" class="ui-btn-right">Information</a>
+		<span class="ui-title" />
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<a href="index.html" data-role="button" data-icon="back" data-inline="true">Back</a>
-		<a href="mapinfo.html" data-role="button" data-icon="camera" data-inline="true">More Info</a>
+	<div data-role="content">
+		<div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+			<a href="map.html" data-transition="fade" data-role="button" data-icon="navigation">Map</a>
+			<a href="trending.html" data-transition="fade" data-role="button" data-icon="star">Trending</a>
+			<a href="camera.html" data-transition="fade" data-role="button" data-icon="camera">Camera</a>
+		</div>	
+
 		<div align="center">
-			<img align="center" src="dealmap.png" style="width: 300px;">
+			<img align="center" src="dealmap.png" style="width: 300px; padding: 20px">
 		</div>
 
 	<label for="select-choice-0" class="select" style="text-align:center;">Deal Categories:</label>

@@ -12,15 +12,18 @@
 <div data-role="page" id="camera">
 
 	<div data-role="header">
-		<h1>Camera</h1>
+		<a href="index.html" data-transition="slide" data-direction="reverse" data-icon="back" class="ui-btn-left">Back</a>
+		<span class="ui-title" />
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<a href="index.html" data-role="button" data-icon="back" data-inline="true">Back</a>
+		<img src="../themes/images/icons-png/camera-black.png" height="20px" width="25px">
 		<div align="center">
-			<img align="center" src="Chipotle.png" style="width: 300px;">
+			<img align="center" src="Chipotle.png" style="width: 300px; padding-bottom: 20px">
 		</div>	
-		<a href="success.html" data-role="button" data-icon="camera" data-iconpos="top">Take Picture</a>
+		<a href="success.html" data-transition="none" data-role="button" class="ui-icon-myicon-camera" style=".ui-icon-myicon-camera:after {
+			background-image: url("../themes/images/icons-png/camera-black.png");
+		}">Take Picture</a>
 	</div><!-- /content -->
 
 </div><!-- /page -->

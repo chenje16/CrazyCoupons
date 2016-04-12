@@ -12,20 +12,28 @@
 <div data-role="page">
 
 	<div data-role="header">
+		<a href="index.html" data-transition="slide" data-direction="reverse" data-icon="back" class="ui-btn-left">Back</a>
 		<h1>Trending</h1>
 	</div><!-- /header -->
 
 
 	<div data-role="content">
-	<a href="index.html" data-role="button" data-icon="back" data-inline="true">Back</a>
-	<p align="center">Search Popular Deals Near You</p>
-	<ul data-role="listview" data-inset="true" data-filter="true">
-		<li><a href="#">Panera</a></li>
-		<li><a href="#">Yenching</a></li>
-		<li><a href="#">Finales</a></li>
-		<li><a href="#">Leo's Diner</a></li>
-		<li><a href="#">Curious George</a></li>
-	</ul>
+		
+		<p align="center">Search Popular Deals Near You</p>
+
+		<div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+			<a href="map.html" data-transition="fade" data-role="button" data-icon="navigation">Map</a>
+			<a href="trending.html" data-transition="fade" data-role="button" data-icon="star">Trending</a>
+			<a href="camera.html" data-transition="fade" data-role="button" data-icon="camera">Camera</a>
+		</div>	
+
+		<ul data-role="listview" data-inset="true" data-filter="true">
+			<li><a href="#">Panera</a></li>
+			<li><a href="#">Yenching</a></li>
+			<li><a href="#">Finales</a></li>
+			<li><a href="#">Leo's Diner</a></li>
+			<li><a href="#">Curious George</a></li>
+		</ul>
 	
 	</div><!-- /content -->
 
