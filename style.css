@@ -7,3 +7,7 @@
     float: left;
     width: 400px;
 }
+
+.ui-mobile-viewport{
+	background-color: blue;
+}
