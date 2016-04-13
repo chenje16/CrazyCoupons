@@ -3,9 +3,31 @@
 	<head> 
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-2.1.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/quantize.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/color-thief.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/photo-resize.js"></script>
+	<style>
+		#yourimage {
+			width:100%;	
+		}
+		
+		#swatches {
+			width: 100%;
+			height: 50px;	
+		}
+		.swatch {
+			width:18%;
+			height: 50px;
+			border-style:solid;
+			border-width:thin;	
+			float: left;
+			margin-right: 3px;	
+		}
+	</style>
 </head> 
 <body> 
 
@@ -26,10 +48,63 @@
 			<a href="camera.html" data-transition="fade" data-role="button" data-icon="camera" data-theme="b">Camera</a>
 		</div>	
 		
-		<div align="center">
-			<img align="center" src="Chipotle.png" style="width: 300px; padding-bottom: 20px">
-		</div>	
-		<a href="success.html" data-transition="none" data-role="button" text-align="center">Take Picture</a>
+		<input type="file" capture="camera" accept="image/*" id="takePictureField">
+
+        <div style="position:fixed; height: 100%; width: 100%;">
+			<img id="yourimage">
+		</div>
+
+		<script>
+			var desiredWidth;
+		    $(document).ready(function() {
+		        console.log('onReady');
+				$("#takePictureField").bind("change",gotPic);
+				desiredWidth = window.innerWidth;
+		        
+		        if(!("url" in window) && ("webkitURL" in window)) {
+		            window.URL = window.webkitURL;   
+		        }
+				
+			});
+
+			$.fn.photoResize = function (options) {
+
+				var element	= $(this), 
+					defaults = {
+			            bottomSpacing: 10
+					};
+				
+				$(element).load(function () {
+					updatePhotoHeight();
+
+					$(window).bind('resize', function () {
+						updatePhotoHeight();
+					});
+				});
+
+				options = $.extend(defaults, options);
+
+				function updatePhotoHeight() {
+					var o = options, 
+						photoHeight = $(window).height();
+
+					$(element).attr('height', photoHeight - o.bottomSpacing);
+				}
+			};
+			
+			function gotPic(event) {
+		        if(event.target.files.length == 1 && 
+		           event.target.files[0].type.indexOf("image/") == 0) {
+		            $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
+		        	$("#yourimage").photoResize();
+		        }
+			}
+
+		</script>   
+
+
+
+
 	</div><!-- /content -->
 
 </div><!-- /page -->
