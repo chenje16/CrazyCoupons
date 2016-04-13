@@ -9,12 +9,21 @@
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 
 	<script type="text/javascript">
+		var couponstuff;
+		var runfunction;
 		var client = new XMLHttpRequest();
 		client.open('GET', '/coupons.csv');
 		client.onreadystatechange = function() {
-		  console.log(client.responseText);
+			couponstuff = client.responseText
+		  	runfunction();
 		}
 		client.send();
+
+		//gets called after the csv has been loaded in
+		runfunction = function(){
+			console.log(couponstuff)
+		}
+
 	</script>
 
 </head> 
