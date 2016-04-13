@@ -11,19 +11,37 @@
 	<script type="text/javascript">
 		var couponstuff;
 		var runfunction;
+		var count = 0;
+		var datastructure = [];
 		var client = new XMLHttpRequest();
 		client.open('GET', '/coupons.csv');
 		client.onreadystatechange = function() {
 			couponstuff = client.responseText
 		  	runfunction();
+
 		}
 		client.send();
 
 		//gets called after the csv has been loaded in
 		runfunction = function(){
 			var partofstring = couponstuff.split(',');
-			console.log(couponstuff);
-			console.log(partofstring)
+			if (partofstring[1]!=null && count==0) {
+				for (var i = 0; i < partofstring.length; i++) {
+					partofstring[i] = partofstring[i].replace('"','');
+				};
+				for (var i = 0; i < ((partofstring.length)/4); i++) {
+							datastructure.push({
+								store: partofstring[(i*4)],
+								category: partofstring[(i*4)+1],
+								expirationdate: partofstring[(i*4)+2],
+								specifics: partofstring[(i*4)+3]
+						})
+					
+
+				};
+				console.log(datastructure)
+				count++;
+			};
 
 		}
 
