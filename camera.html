@@ -12,18 +12,24 @@
 <div data-role="page" id="camera">
 
 	<div data-role="header">
-		<a href="index.html" data-transition="slide" data-direction="reverse" data-icon="home" class="ui-btn-left">Home</a>
-		<h1>Camera</h1>
+		<a href="options.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left">Options</a>
+		<a href="camerainfo.html" data-transition="slide" data-icon="info" class="ui-btn-right">Information</a>
+		<span class="ui-title" />
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<img src="../themes/images/icons-png/camera-black.png" height="20px" width="25px">
+
+		<div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+			<a href="index.html" data-transition="fade" data-role="button" data-icon="home">Home</a>
+			<a href="map.html" data-transition="fade" data-role="button" data-icon="navigation">Map</a>
+			<a href="trending.html" data-transition="fade" data-role="button" data-icon="star">Trending</a>
+			<a href="camera.html" data-transition="fade" data-role="button" data-icon="camera" data-theme="b">Camera</a>
+		</div>	
+		
 		<div align="center">
 			<img align="center" src="Chipotle.png" style="width: 300px; padding-bottom: 20px">
 		</div>	
-		<a href="success.html" data-transition="none" data-role="button" class="ui-icon-myicon-camera" style=".ui-icon-myicon-camera:after {
-			background-image: url("../themes/images/icons-png/camera-black.png");
-		}">Take Picture</a>
+		<a href="success.html" data-transition="none" data-role="button">Take Picture</a>
 	</div><!-- /content -->
 
 </div><!-- /page -->
