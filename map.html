@@ -3,9 +3,12 @@
 	<head> 
 	<title>Deal Map</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script src="/assets/gmap3.js?body=1" type="text/javascript"></script>
+	<script src="/text/javascript" src="js/map.js"></script>
 </head> 
 <body> 
 
@@ -25,17 +28,53 @@
 			<a href="camera.html" data-transition="fade" data-role="button" data-icon="camera">Camera</a>
 		</div>	
 
-		<div align="center">
-			<img align="center" src="dealmap.png" style="width: 300px; padding: 20px">
-		</div>
 
-	<label for="select-choice-0" class="select" style="text-align:center;">Deal Categories:</label>
-	<select name="select-choice-0" id="select-choice-1">
-	   <option value="clothes">Clothes</option>
-	   <option value="food">Food</option>
-	   <option value="office supplies">Office Supplies</option>
-	   <option value="misc">Miscelaneous</option>
-	</select>
+		<label for="select-choice-0" class="select" style="text-align:center;">Deal Categories:</label>
+		<select name="select-choice-0" id="select-choice-1">
+		   <option value="clothes">Clothes</option>
+		   <option value="food">Food</option>
+		   <option value="office supplies">Office Supplies</option>
+		   <option value="misc">Miscelaneous</option>
+		</select>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+
+		<div role="main" class="ui-content" id="map-canvas">
+
+		<script>
+		function initialize() {
+			var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
+		    if ( navigator.geolocation ) {
+		        function success(pos) {
+		            // Location found, show map with these coordinates
+		            drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+		        }
+		        function fail(error) {
+		            drawMap(defaultLatLng);  // Failed to find location, show default map
+		        }
+		        // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
+		        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+		    } else {
+		        drawMap(defaultLatLng);  // No geolocation support, show default map
+		    }
+		    function drawMap(latlng) {
+		        var myOptions = {
+		            zoom: 10,
+		            center: latlng,
+		            mapTypeId: google.maps.MapTypeId.ROADMAP
+		        };
+		        var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+		        // Add an overlay to the map of current lat/lng
+		        var marker = new google.maps.Marker({
+		            position: latlng,
+		            map: map,
+		            title: "Greetings!"
+		        });
+		    }    
+		}
+		</script>
+
 
 	</div><!-- /content -->
 
