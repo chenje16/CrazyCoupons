@@ -11,7 +11,9 @@
 	<script type="text/javascript">
 		var couponstuff;
 		var runfunction;
+		var testing = [];
 		var count = 0;
+		var newcoupon = {};
 		var datastructure = [];
 		var client = new XMLHttpRequest();
 		client.open('GET', '/coupons.csv');
@@ -24,25 +26,38 @@
 
 		//gets called after the csv has been loaded in
 		runfunction = function(){
-			var partofstring = couponstuff.split(',');
-			if (partofstring[1]!=null && count==0) {
-				for (var i = 0; i < partofstring.length; i++) {
-					partofstring[i] = partofstring[i].replace('"','');
-				};
-				for (var i = 0; i < ((partofstring.length)/4); i++) {
-							datastructure.push({
-								store: partofstring[(i*4)],
-								category: partofstring[(i*4)+1],
-								expirationdate: partofstring[(i*4)+2],
-								specifics: partofstring[(i*4)+3]
-						})
-					
+			testing = JSON.parse( localStorage.getItem( 'couponlist' ) );
+			
+			if (localStorage.clickcount == null || localStorage.clickcount == 0) {
+				var partofstring = couponstuff.split(',');
+				if (partofstring[1]!=null && count==0) {
+					for (var i = 0; i < partofstring.length; i++) {
+						partofstring[i] = partofstring[i].replace('"','');
+					};
+					for (var i = 0; i < ((partofstring.length)/4); i++) {
+								datastructure.push({
+									store: partofstring[(i*4)],
+									category: partofstring[(i*4)+1],
+									expirationdate: partofstring[(i*4)+2],
+									specifics: partofstring[(i*4)+3]
+							})
+						
 
+					};
+					console.log(datastructure)
+					testing = datastructure;
+					console.log(testing)
+					count++;
+					localStorage.clickcount=0;
 				};
-				console.log(datastructure)
-				count++;
-			};
+			}
+			else{
+				console.log("hello")
+				console.log(JSON.parse( localStorage.getItem('couponlist')))
+			}
 		}
+
+		
 
 		
 	</script>
@@ -81,7 +96,7 @@
 
 
 		<ul data-role="listview" data-inset="true" data-filter="true">
-			<li><a href="#">
+			<li><a href="#" onclick="addtoJson()">
 				<h1>CVS</h1>
 				<h2>$3.00 ExtraBucks</h2>
 				<h3 class="ui-li-aside">4/20/16</h3>
@@ -107,6 +122,34 @@
 				<h3 class="ui-li-aside">5/5/16</h3>
 			</a></li>
 		</ul>
+
+		<script type="text/javascript">
+
+			var addtoJson = function(){
+				
+				newcoupon = {
+					store: "New Store",
+					category: "Random",
+					expirationdate: "6/30/16",
+					specifics: "Some Deal"
+				};
+
+				if (localStorage.couponlist != null) {
+					datastructure = JSON.parse( localStorage.getItem('couponlist'));
+				};
+
+				datastructure.push(newcoupon)
+				console.log(datastructure)
+				localStorage.setItem( 'couponlist', JSON.stringify(datastructure) );
+				
+
+				localStorage.clickcount++;
+			}
+
+
+
+
+		</script>
 	</div><!-- /content -->
 
 </div><!-- /page -->
