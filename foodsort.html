@@ -70,6 +70,20 @@
 		background-repeat: no-repeat;
 	}
 
+	.ui-icon-myapp-location{
+		background-color: transparent;
+		background: url("icon-location.png") no-repeat rgba(0,0,0,0.4);
+		background-size: 15px 15px;
+		background-position: center;
+	}
+
+	.ui-icon-myapp-camera{
+		background-color: transparent;
+		background: url("icon-camera.png") no-repeat rgba(0,0,0,0.4);
+		background-size: 13px 13px;
+		background-position: center;
+	}
+
 </style>
 
 </head> 
@@ -86,10 +100,10 @@
 	<div data-role="content">	
 		<div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
 			<a href="index.html" data-transition="fade" data-role="button" data-icon="home" data-theme="b">Home</a>
-			<a href="map.html" data-transition="fade" data-role="button" data-icon="navigation">Map</a>
+			<a href="map.html" data-transition="fade" data-role="button" data-icon="myapp-location">Map</a>
 			<a href="trending.html" data-transition="fade" data-role="button" data-icon="star">Trending</a>
-			<a href="camera.html" data-transition="fade" data-role="button" data-icon="camera">Camera</a>
-		</div>		
+			<a href="camera.html" data-transition="fade" data-role="button" data-icon="myapp-camera">Camera</a>
+		</div>			
 
 
 		<form>
