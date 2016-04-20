@@ -57,7 +57,9 @@
 			}
 		}
 
+		
 
+		
 	</script>
 
 <style type="text/css">
@@ -66,20 +68,6 @@
 		background: transparent url("background.jpg");
 		background-size: 200% 100%;
 		background-repeat: no-repeat;
-	}
-
-	.ui-icon-myapp-location{
-		background-color: transparent;
-		background: url("icon-location.png") no-repeat rgba(0,0,0,0.4);
-		background-size: 15px 15px;
-		background-position: center;
-	}
-
-	.ui-icon-myapp-camera{
-		background-color: transparent;
-		background: url("icon-camera.png") no-repeat rgba(0,0,0,0.4);
-		background-size: 13px 13px;
-		background-position: center;
 	}
 
 </style>
@@ -98,9 +86,9 @@
 	<div data-role="content">	
 		<div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
 			<a href="index.html" data-transition="fade" data-role="button" data-icon="home" data-theme="b">Home</a>
-			<a href="map.html" data-transition="fade" data-role="button" data-icon="myapp-location">Map</a>
+			<a href="map.html" data-transition="fade" data-role="button" data-icon="navigation">Map</a>
 			<a href="trending.html" data-transition="fade" data-role="button" data-icon="star">Trending</a>
-			<a href="camera.html" data-transition="fade" data-role="button" data-icon="myapp-camera">Camera</a>
+			<a href="camera.html" data-transition="fade" data-role="button" data-icon="camera">Camera</a>
 		</div>		
 
 
@@ -108,9 +96,9 @@
 			<div class="ui-field-contain">
 	    		<label align="center" for="select-native-2">Sort By:</label>
 			    <select onchange="window.open(this.value,'_self','');" name="select-native-2" id="select-native-2" data-mini="true">
-			        <option>Expiration Date</option>
+			        <option>Clothing</option>
+			        <option value="index.html">Expiration Date</option>
 			        <option value="foodsort.html">Food</option>
-			        <option value="clothingsort.html">Clothing</option>
 			        <option value="producesort.html">Produce</option>
 			    </select>
 			</div>
@@ -119,30 +107,16 @@
 
 		<ul data-role="listview" data-inset="true" data-filter="true">
 			<li><a href="#" onclick="addtoJson()">
-				<h1>CVS</h1>
-				<h2>$3.00 ExtraBucks</h2>
-				<h3 class="ui-li-aside">4/20/16</h3>
-			</a></li>
-			<li><a href="#">
 				<h1>Macy's</h1>
-				<h2>50% Off Sale</h2>
+				<h2>50% off sale</h2>
 				<h3 class="ui-li-aside">4/25/16</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Best Buy</h1>
-				<h2>$10 Off Your $50 Purchase</h2>
-				<h3 class="ui-li-aside">5/1/16</h3>
-			</a></li>
-			<li><a href="#">
-				<h1>El Jeffe's</h1>
-				<h2>Free Burrito</h2>
-				<h3 class="ui-li-aside">5/2/16</h3>
-			</a></li>
-			<li><a href="#">
-				<h1>Gyu-Kaku</h1>
-				<h2>Complimentary Side Dish</h2>
+				<h1>American Eagle</h1>
+				<h2>BOGO 25% off</h2>
 				<h3 class="ui-li-aside">5/5/16</h3>
 			</a></li>
+			
 		</ul>
 
 		<script type="text/javascript">
