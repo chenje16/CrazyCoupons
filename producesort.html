@@ -62,44 +62,20 @@
 		
 	</script>
 
-<style type="text/css">
-
-	.ui-page{
-		background: transparent url("background.jpg");
-		background-size: 200% 100%;
-		background-repeat: no-repeat;
-	}
-
-	.ui-icon-myapp-location{
-		background-color: transparent;
-		background: url("icon-location.png") no-repeat rgba(0,0,0,0.4);
-		background-size: 15px 15px;
-		background-position: center;
-	}
-
-	.ui-icon-myapp-camera{
-		background-color: transparent;
-		background: url("icon-camera.png") no-repeat rgba(0,0,0,0.4);
-		background-size: 13px 13px;
-		background-position: center;
-	}
-
-</style>
-
 </head> 
 <body id="mainpage" style="background-image: url("background.jpg")"> 
 
 <div data-role="page" >
 
 	<div data-role="header">
-		<a href="information.html" data-transition="slide" data-icon="info" class="ui-btn-right">Information</a>
+		<a href="information.html" data-transition="slide" data-icon="info" class="ui-btn-right" style="background: #FFFFFF; color: #505050; font-size: 14px; text-shadow: none">Information</a>
 		<h1>Crazy Coupons</h1>
-		<a href="options.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left">Options</a>
+		<a href="options.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left" style="background: #FFFFFF; color: #505050; font-size: 14px; text-shadow: none">Options</a>
 	</div><!-- /header -->
 
-	<div data-role="content">	
+	<div data-role="content" style="white-space: nowrap">	
 		<div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
-			<a href="index.html" data-transition="fade" data-role="button" data-icon="home" data-theme="b">Home</a>
+			<a href="index.html" data-transition="fade" data-role="button" data-icon="home" style="color: #FFFFFF; text-shadow: none" data-theme="b">Home</a>
 			<a href="map.html" data-transition="fade" data-role="button" data-icon="myapp-location">Map</a>
 			<a href="trending.html" data-transition="fade" data-role="button" data-icon="star">Trending</a>
 			<a href="camera.html" data-transition="fade" data-role="button" data-icon="myapp-camera">Camera</a>
@@ -108,7 +84,7 @@
 
 		<form>
 			<div class="ui-field-contain">
-	    		<label align="center" for="select-native-2">Sort By:</label>
+	    		<label align="center" for="select-native-2"></label>
 			    <select onchange="window.open(this.value,'_self','');" name="select-native-2" id="select-native-2" data-mini="true">
 			        <option>Produce</option>
 			        <option value="clothingsort.html">Clothing</option>
@@ -119,16 +95,16 @@
 		</form>
 
 
-		<ul data-role="listview" data-inset="true" data-filter="true">
+		<ul data-role="listview" data-inset="true" data-filter="true" style="padding: 10px">
 			<li><a href="#" onclick="addtoJson()">
-				<h1>Star Market</h1>
-				<h2>Free Yorgurt</h2>
-				<h3 class="ui-li-aside">5/9/16</h3>
+				<img src="../logos/ShawsStar.png" style="padding-top: 15px; padding-left: 10px"></img>
+				<h2 class="discount">Free Yogurt</h2>
+				<h3 class="ui-li-aside expdate">5/9/16</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Whole Foods</h1>
-				<h2>$10 off Purchase</h2>
-				<h3 class="ui-li-aside">5/20/16</h3>
+				<img src="../logos/wholefoods.png" style="padding-top: 10px; padding-left: 10px"></img>
+				<h2 class="discount">$10 Off Purchase</h2>
+				<h3 class="ui-li-aside expdate">5/20/16</h3>
 			</a></li>
 			
 		</ul>

@@ -4,6 +4,7 @@
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 	</head> 
@@ -13,13 +14,13 @@
 <div data-role="page">
 
 	<div data-role="header">
-		<a href="options.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left">Options</a>
-		<h1>Search Popular Deals Near You</h1>
-		<a href="trendinginfo.html" data-transition="slide" data-icon="info" class="ui-btn-right">Information</a>
+		<a href="options.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left" style="background: #FFFFFF; color: #505050; font-size: 14px; text-shadow: none">Options</a>
+		<h1>Trending</h1>
+		<a href="trendinginfo.html" data-transition="slide" data-icon="info" class="ui-btn-right" style="background: #FFFFFF; color: #505050; font-size: 14px; text-shadow: none">Information</a>
 	</div><!-- /header -->
 
 
-	<div data-role="content">
+	<div data-role="content" style="white-space: nowrap">
 
 		<div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
 			<a href="index.html" data-transition="fade" data-role="button" data-icon="home">Home</a>
@@ -28,31 +29,31 @@
 			<a href="camera.html" data-transition="fade" data-role="button" data-icon="myapp-camera">Camera</a>
 		</div>	
 
-		<ul data-role="listview" data-inset="true" data-filter="true">
+		<ul data-role="listview" data-inset="true" data-filter="true" style="padding: 10px">
 			<li><a href="#">
-				<h1>Panera</h1>
-				<h2>Free Drink</h2>
-				<h3 class="ui-li-aside">0.5 mi</h3>
+				<img src="../logos/PaneraLogo.png" style="padding-top: 20px; padding-left: 10px"></img>
+				<h2 class="discount">Free drink</h2>
+				<h3 class="ui-li-aside expdate">0.5 mi</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Yenching</h1>
-				<h2>Free Rice Bowl</h2>
-				<h3 class="ui-li-aside">1.1 mi</h3>
+				<img src="../logos/HKlogo.png" style="padding-top: 25px; padding-left: 10px"></img>
+				<h2 class="discount">Free Rice Bowl</h2>
+				<h3 class="ui-li-aside expdate">1.1 mi</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Finales</h1>
-				<h2>Free Pastry</h2>
-				<h3 class="ui-li-aside">0.6 mi</h3>
+				<img src="../logos/laburdick.png" style="padding-top: 25px; padding-left: 10px"></img>
+				<h2 class="discount">Free Chocolate</h2>
+				<h3 class="ui-li-aside expdate">0.6 mi</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Leo's Diner</h1>
-				<h2>Free Side of Sausage</h2>
-				<h3 class="ui-li-aside">0.9 mi</h3>
+				<img src="../logos/zoe.png" style="padding-left: 10px"></img>
+				<h2 class="discount">Free Side of Sausage</h2>
+				<h3 class="ui-li-aside expdate">0.9 mi</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Curious George</h1>
-				<h2>$20 Off Stuffed Animal</h2>
-				<h3 class="ui-li-aside">0.3 mi</h3>
+				<img src="../logos/curiousgeorge.png" style="padding-top: 35px; padding-left: 10px"></img>
+				<h2 class="discount">$20 Off Stuffed Animal</h2>
+				<h3 class="ui-li-aside expdate">0.3 mi</h3>
 			</a></li>
 		</ul>
 	
