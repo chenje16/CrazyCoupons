@@ -4,6 +4,7 @@
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 	</head> 
@@ -12,16 +13,16 @@
 <div data-role="page" id="setting">
 
 	<div data-role="header">
-		<a href="options.html" align="left" data-role="button" data-icon="back" data-direction="reverse" data-inline="true" style="background: #FFFFFF; color: #505050; font-size: 14px; text-shadow: none">Back</a>
+		<a href="options.html" align="left" data-role="button" data-icon="back" data-direction="reverse" data-inline="true" style="background: #FFFFFF; color: #505050; font-size: 12px; text-shadow: none">Back</a>
 		<h1>Suggested Deals</h1>
 	</div><!-- /header -->
 
 	
-	<div align = "center" data-role="content">
+	<div data-role="content" class="notifybackdrop">
 	
-		<div style="width: 40%;" data-role="fieldcontain">
-			<label for="flip-mini-1">Suggested Deals:</label>
-				<select name="flip-mini-1" id="flip-mini-1" data-role="slider" data-mini="true" style="text-align: right">
+		<div data-role="fieldcontain" style="width: 275px">
+			<label for="flip-mini-3" id="flip-mini-3-label" class="ui-slider" style="padding-top: 10px; width: 130px">Suggested Deals:</label>
+				<select name="flip-mini-3" id="flip-mini-3" data-role="slider" class="ui-slider-switch" data-mini="true">
 					<option value="off">Off</option>
 					<option value="on">On</option>
 				</select>
