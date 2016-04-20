@@ -47,12 +47,35 @@
 		<div role="main" class="ui-content" id="map-canvas">
 
 		<script>
+
+		var testJSON = [
+		  {
+		    "title": "Deal1",
+		    "lat": 42.3601, 
+		    "lng": -71.0589,
+		    "description": "This is a test deal 1"
+		  },
+		  {
+		    "title": "Deal2",
+		    "lat": 42.2503,
+		    "lng": -71.2359,
+		    "description": "This is a test deal 2"
+		  },
+		  {
+		    "title": "Deal3",
+		    "lat": 42.40102,
+		    "lng": -71.3052,
+		    "description": "This is our last test deal"
+		  }
+		];
+
 		function initialize() {
 			var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
 		    if ( navigator.geolocation ) {
 		        function success(pos) {
 		            // Location found, show map with these coordinates
 		            drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+		            console.log(pos.coords.latitude + ", " + pos.coords.longitude);
 		        }
 		        function fail(error) {
 		            drawMap(defaultLatLng);  // Failed to find location, show default map
@@ -62,6 +85,8 @@
 		    } else {
 		        drawMap(defaultLatLng);  // No geolocation support, show default map
 		    }
+
+
 		    function drawMap(latlng) {
 		        var myOptions = {
 		            zoom: 10,
@@ -75,8 +100,32 @@
 		            map: map,
 		            title: "Greetings!"
 		        });
-		    }    
+
+		        for (var i = 0, length = testJSON.length; i < length; i++) {
+				  var data = testJSON[i], 
+				  latLng = new google.maps.LatLng(data.lat, data.lng); 
+				  infowindow = new google.maps.InfoWindow();
+
+				  // Creating a marker and putting it on the map
+				  var marker = new google.maps.Marker({
+				    position: latLng,
+				    map: map,
+				    title: data.title
+				  });
+
+				google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+				    return function() {
+				        infowindow.setContent(content);
+				        infowindow.open(map,marker);
+				    };
+				})(marker,data.description,infowindow));  
+
+				} 
+
+		        test = new google.maps.LatLng();
+		    } 
 		}
+
 		</script>
 
 

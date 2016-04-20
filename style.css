@@ -1,3 +1,17 @@
+html,
+body {
+  height: 100%;
+}
+
+#map-canvas {
+  min-width: 200px;
+  width: 50%;
+  min-height: 300px;
+  height: 100%;
+  border: 1px solid blue;
+  margin: 0 auto; 
+}
+
 #first{
     float: left;
     width: 20%;
