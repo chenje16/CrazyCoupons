@@ -60,34 +60,6 @@
 
 	</script>
 
-<style type="text/css">
-
-	.ui-header{
-		background:#780000;
-	}
-
-	.ui-page{
-		background: transparent url("background.jpg");
-		background-size: 200% 100%;
-		background-repeat: no-repeat;
-	}
-
-	.ui-icon-myapp-location{
-		background-color: transparent;
-		background: url("icon-location.png") no-repeat rgba(0,0,0,0.4);
-		background-size: 15px 15px;
-		background-position: center;
-	}
-
-	.ui-icon-myapp-camera{
-		background-color: transparent;
-		background: url("icon-camera.png") no-repeat rgba(0,0,0,0.4);
-		background-size: 13px 13px;
-		background-position: center;
-	}
-
-</style>
-
 </head> 
 <body id="mainpage" style="background-image: url("background.jpg")"> 
 
@@ -110,7 +82,7 @@
 
 		<form>
 			<div class="ui-field-contain">
-	    		<label align="center" for="select-native-2">Sort By:</label>
+	    		<label align="center" for="select-native-2"></label>
 			    <select onchange="window.open(this.value,'_self','');" name="select-native-2" id="select-native-2" data-mini="true">
 			        <option>Expiration Date</option>
 			        <option value="foodsort.html">Food</option>
@@ -123,29 +95,29 @@
 
 		<ul data-role="listview" data-inset="true" data-filter="true">
 			<li><a href="#" onclick="addtoJson()">
-				<h1>CVS</h1>
-				<h2>$3.00 ExtraBucks</h2>
-				<h3 class="ui-li-aside">4/20/16</h3>
+				<img src="CVS-Pharmacy.jpg" style="padding-top: 20px; padding-left: 10px"></img>
+				<h2 class="discount">$3.00 ExtraBucks</h2>
+				<h3 class="ui-li-aside expdate">4/20/16</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Macy's</h1>
-				<h2>50% Off Sale</h2>
-				<h3 class="ui-li-aside">4/25/16</h3>
+				<img src="Macy's.png" style="padding-top: 30px; padding-left: 10px"></img>
+				<h2 class="discount">50% Off Sale</h2>
+				<h3 class="ui-li-aside expdate">4/25/16</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Best Buy</h1>
-				<h2>$10 Off Your $50 Purchase</h2>
-				<h3 class="ui-li-aside">5/1/16</h3>
+				<img src="BestBuy.png" style="padding-top: 15px; padding-left: 10px"></img>
+				<h2 class="discount">$10 Off Your $50 Purchase</h2>
+				<h3 class="ui-li-aside expdate">5/1/16</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>El Jeffe's</h1>
-				<h2>Free Burrito</h2>
-				<h3 class="ui-li-aside">5/2/16</h3>
+				<img src="ElJefe.png" style="padding-left: 10px"></img>
+				<h2 class="discount">Free Burrito</h2>
+				<h3 class="ui-li-aside expdate">5/2/16</h3>
 			</a></li>
 			<li><a href="#">
-				<h1>Gyu-Kaku</h1>
-				<h2>Complimentary Side Dish</h2>
-				<h3 class="ui-li-aside">5/5/16</h3>
+				<img src="Gyotaku.png" style="padding-left: 5px"></img>
+				<h2 class="discount">Complimentary Side Dish</h2>
+				<h3 class="ui-li-aside expdate">5/5/16</h3>
 			</a></li>
 		</ul>
 
