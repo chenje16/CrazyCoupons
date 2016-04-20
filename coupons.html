@@ -27,30 +27,34 @@
 		<div align="center">
 		<img align="center" src="CVScoupon.jpg" style="width: 400px; border: dashed">
 		</div>
-	
-		<div data-role="fieldcontain" style="width: 40%" on-click="displaytime()">
-			<label for="flip-mini-1" id="flip-mini-1-label" class="ui-slider" style="padding-top: 10px; width: 90px">Notifications:</label>
-				<select name="flip-mini-1" id="flip-mini-1" data-role="slider" class="ui-slider-switch" data-mini="true">
-					<option value="off">Off</option>
-					<option value="on">On</option>
-				</select>
+
+		<div class="notifybackdrop">
+
+			<div data-role="fieldcontain" id="notify" style="width: 300px" on-click="displaytime()">
+				<label for="flip-mini-1" id="flip-mini-1-label" class="ui-slider" style="padding-top: 10px; width: 90px">Notifications:</label>
+					<select name="flip-mini-1" id="flip-mini-1" data-role="slider" class="ui-slider-switch" data-mini="true">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+			</div>
+
+			<br></br>
+
+			<div data-role="fieldcontain" style="width: 350px" >
+				<label for="select-time" style="width: 120px; white-space: normal" >Notify me before expiration date:</label>
+				<select name="select-time" id="select-time" data-mini="true" disabled="disabled">
+					<option value="Select">Select</option>
+					<option value="7 days">7 days</option>
+					<option value="6 days">6 days</option>
+					<option value="5 days">5 days</option>
+					<option value="4 days">4 days</option>
+					<option value="3 days">3 days</option>
+					<option value="2 days">2 days</option>
+					<option value="1 day">1 day</option>
+			</div>
+
 		</div>
-
-		<br></br>
-
-		<div data-role="fieldcontain" style="width: 40%" >
-			<label for="select-time" style="width: 120px; white-space: normal" >Notify me before expiration date:</label>
-			<select name="select-time" id="select-time" data-mini="true">
-				<option value="Select">Select</option>
-				<option value="7 days">7 days</option>
-				<option value="6 days">6 days</option>
-				<option value="5 days">5 days</option>
-				<option value="4 days">4 days</option>
-				<option value="3 days">3 days</option>
-				<option value="2 days">2 days</option>
-				<option value="1 day">1 day</option>
-		</div>
-
+		
 <!-- 		<br></br>
 
  		<div style="width: 40%;" data-role="fieldcontain">

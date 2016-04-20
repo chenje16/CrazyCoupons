@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script src="/text/javascript" src="js/notifications.js"></script>
 	</head> 
 <body > 
 
@@ -18,9 +19,9 @@
 	</div><!-- /header -->
 
 	
-	<div data-role="content" style="background-color: white">
+	<div data-role="content" class="notifybackdrop">
 
-		<div data-role="fieldcontain" style="width: 300px" on-click="displaytime()">
+		<div data-role="fieldcontain" id="notify" style="width: 300px" on-click="displaytime()">
 			<label for="flip-mini-1" id="flip-mini-1-label" class="ui-slider" style="padding-top: 10px; width: 90px">Notifications:</label>
 				<select name="flip-mini-1" id="flip-mini-1" data-role="slider" class="ui-slider-switch" data-mini="true">
 					<option value="off">Off</option>
@@ -32,7 +33,7 @@
 
 		<div data-role="fieldcontain" style="width: 350px" >
 			<label for="select-time" style="width: 120px; white-space: normal" >Notify me before expiration date:</label>
-			<select name="select-time" id="select-time" data-mini="true">
+			<select name="select-time" id="select-time" data-mini="true" disabled="disabled">
 				<option value="Select">Select</option>
 				<option value="7 days">7 days</option>
 				<option value="6 days">6 days</option>
