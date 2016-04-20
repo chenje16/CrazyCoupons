@@ -18,7 +18,7 @@
 }
 
 .ui-header{
-	background:#780000;
+	background:#006699;
 }
 
 .ui-page{
@@ -44,6 +44,7 @@
 .discount{
 	font-size: 15px;
 	padding-top: 15px;
+	white-space: normal;
 }
 
 .expdate{
