@@ -25,6 +25,7 @@
 	background: transparent url("background.jpg");
 	background-size: 200% 100%;
 	background-repeat: no-repeat;
+	background-color: white;
 }
 
 .ui-icon-myapp-location{
