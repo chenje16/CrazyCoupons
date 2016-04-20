@@ -11,11 +11,6 @@
 
 <style>
 
-.ui-page{
-	background: none;
-	background-color: white;
-}
-
 </style>
 
 <body> 
@@ -23,22 +18,50 @@
 <div data-role="page" id="coupon">
 
 	<div data-role="header">
-		<h1>Coupon</h1>
+			<a href="index.html" data-transition="slide" data-direction="reverse" data-icon="back" class="ui-btn-left" style="background: #FFFFFF; color: #505050; font-size: 14px; text-shadow: none">Back</a>
+			<span class="ui-title"></span>
 	</div><!-- /header -->
 
 	<div data-role="content">	
 
-	<div align="center">
-	<img align="center" src="CVScoupon.jpg" style="width: 300px;">
-	</div>
-
-	<div align="center" style="width: 500px;" data-role="fieldcontain">
-			<label style="" for="flip-mini">Notifications</label>
-				<select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true">
+		<div align="center">
+		<img align="center" src="CVScoupon.jpg" style="width: 400px; border: dashed">
+		</div>
+	
+		<div data-role="fieldcontain" style="width: 40%" on-click="displaytime()">
+			<label for="flip-mini-1" id="flip-mini-1-label" class="ui-slider" style="padding-top: 10px; width: 90px">Notifications:</label>
+				<select name="flip-mini-1" id="flip-mini-1" data-role="slider" class="ui-slider-switch" data-mini="true">
 					<option value="off">Off</option>
 					<option value="on">On</option>
 				</select>
-	</div>
+		</div>
+
+		<br></br>
+
+		<div data-role="fieldcontain" style="width: 40%" >
+			<label for="select-time" style="width: 120px; white-space: normal" >Notify me before expiration date:</label>
+			<select name="select-time" id="select-time" data-mini="true">
+				<option value="Select">Select</option>
+				<option value="7 days">7 days</option>
+				<option value="6 days">6 days</option>
+				<option value="5 days">5 days</option>
+				<option value="4 days">4 days</option>
+				<option value="3 days">3 days</option>
+				<option value="2 days">2 days</option>
+				<option value="1 day">1 day</option>
+		</div>
+
+<!-- 		<br></br>
+
+ 		<div style="width: 40%;" data-role="fieldcontain">
+			<label for="flip-mini-2">Notify me when I'm in the area:</label>
+				<select name="flip-mini-2" id="flip-mini-2" data-role="slider" data-mini="true" style="text-align: right">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+		</div> -->
+
+	</div><!-- /content -->
 
 	</div><!-- /content -->
 

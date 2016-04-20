@@ -4,6 +4,7 @@
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 	</head> 
@@ -17,33 +18,20 @@
 	</div><!-- /header -->
 
 	
-	<div align = "center" data-role="content">
-	
-		<div style="width: 40%" data-role="fieldcontain" on-click="displaytime()">
-			<label for="flip-mini-1" style="padding-top: 10px">Notifications:</label>
-				<select name="flip-mini-1" id="flip-mini-1" data-role="slider" data-mini="true" style="text-align: right">
+	<div data-role="content" style="background-color: white">
+
+		<div data-role="fieldcontain" style="width: 300px" on-click="displaytime()">
+			<label for="flip-mini-1" id="flip-mini-1-label" class="ui-slider" style="padding-top: 10px; width: 90px">Notifications:</label>
+				<select name="flip-mini-1" id="flip-mini-1" data-role="slider" class="ui-slider-switch" data-mini="true">
 					<option value="off">Off</option>
 					<option value="on">On</option>
 				</select>
 		</div>
 
 		<br></br>
-<!--  
-		<div style="width: 40%; border color: none" data-role="fieldcontain">
-			<label for="select-time" style="padding-left: 40px" class="select">Notify me before expiration date:</label>
-			<select name="select-time" id="select-time" data-native-menu="false" data-mini="true">
-				<option>Select</option>
-				<option value="7 days">7 days</option>
-				<option value="6 days">6 days</option>
-				<option value="5 days">5 days</option>
-				<option value="4 days">4 days</option>
-				<option value="3 days">3 days</option>
-				<option value="2 days">2 days</option>
-				<option value="1 day">1 day</option>
-		</div>
- -->
-		<div style="width: 40%" data-role="fieldcontain">
-			<label for="select-time" style="padding-left: 40px" >Notify me before expiration date:</label>
+
+		<div data-role="fieldcontain" style="width: 350px" >
+			<label for="select-time" style="width: 120px; white-space: normal" >Notify me before expiration date:</label>
 			<select name="select-time" id="select-time" data-mini="true">
 				<option value="Select">Select</option>
 				<option value="7 days">7 days</option>
