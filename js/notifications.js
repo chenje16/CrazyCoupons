@@ -1,3 +1,8 @@
 $(document).ready(function(){
-	$("#notify").val("on").slider("enable");
-})
+	$(".notify").find("div.ui-slider").click(function(e) {
+		var selector = $("#select-time");
+		var state = selector.prop("disabled");
+		selector.selectmenu(state ? "enable" : "disable");
+	});
+	
+});

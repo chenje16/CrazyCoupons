@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-	<script src="/text/javascript" src="js/notifications.js"></script>
+	<script type="text/javascript" src="js/notifications.js"></script>
 	</head> 
 <body > 
 
@@ -21,9 +21,9 @@
 	
 	<div data-role="content" class="notifybackdrop">
 
-		<div data-role="fieldcontain" id="notify" style="width: 300px" on-click="displaytime()">
-			<label for="flip-mini-1" id="flip-mini-1-label" class="ui-slider" style="padding-top: 10px; width: 90px">Notifications:</label>
-				<select name="flip-mini-1" id="flip-mini-1" data-role="slider" class="ui-slider-switch" data-mini="true">
+		<div data-role="fieldcontain" style="width: 300px" on-click="displaytime()" class="notify">
+			<label for="flip-mini-2" id="flip-mini-2-label" class="ui-slider" style="padding-top: 10px; width: 90px">Notifications:</label>
+				<select name="flip-mini-2" id="flip-mini-2" data-role="slider" class="ui-slider-switch" data-mini="true">
 					<option value="off">Off</option>
 					<option value="on">On</option>
 				</select>
@@ -43,16 +43,6 @@
 				<option value="2 days">2 days</option>
 				<option value="1 day">1 day</option>
 		</div>
-
-<!-- 		<br></br>
-
- 		<div style="width: 40%;" data-role="fieldcontain">
-			<label for="flip-mini-2">Notify me when I'm in the area:</label>
-				<select name="flip-mini-2" id="flip-mini-2" data-role="slider" data-mini="true" style="text-align: right">
-					<option value="off">Off</option>
-					<option value="on">On</option>
-				</select>
-		</div> -->
 
 	</div><!-- /content -->
 
