@@ -2,10 +2,10 @@
 <html> 
 	<head> 
 	<title>My Page</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-2.1.0.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/quantize.js"></script>
@@ -53,11 +53,14 @@
 
 	<div data-role="content" style="white-space: nowrap">
 		
-		<input type="file" capture="camera" accept="image/*" id="takePictureField">
+		<input type="file" name="takePictureField" capture="camera" accept="image/*" id="takePictureField" class="inputfile" />
+		<label for="takePictureField" style="text-align: center; vertical-align: middle">Get Coupon Pic</label>
 
-        <div style="position:fixed; height: 100%; width: 100%;">
-			<img id="yourimage">
+        <div style="position:relative; height: 500px; width: 500px; vertical-align: middle; margin-left:auto; margin-right:auto; padding-top: 20px">
+			<img id="yourimage" class="couponimg"/>
 		</div>
+
+		<div id="confirmationButtons"></div>
 
 		<script>
 			var desiredWidth;
@@ -98,17 +101,44 @@
 			};
 			
 			function gotPic(event) {
+				console.log("got pic");
 		        if(event.target.files.length == 1 && 
 		           event.target.files[0].type.indexOf("image/") == 0) {
 		            $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
 		        	$("#yourimage").photoResize();
 		        }
+
+		        var btn1 = document.createElement("BUTTON");
+		        $(btn1).attr("class", "camerapagebutton");
+		        $(btn1).attr("style", "vertical-align: middle; margin-left:auto; margin-right:auto; margin-bottom: 10px; margin-top: 20px");
+				var t1 = document.createTextNode("Add to Coupons");     
+				btn1.appendChild(t1); 
+				btn1.onclick = function() { 
+
+					// DO SOME OCR MAGIC HERE
+					newcoupon = {
+						store: "New Store",
+						category: "Random",
+						expirationdate: "6/30/16",
+						specifics: "Some Deal"
+					};
+
+					if (localStorage.couponlist != null) {
+						datastructure = JSON.parse( localStorage.getItem('couponlist'));
+					};
+
+					datastructure.push(newcoupon)
+					console.log(datastructure)
+					localStorage.setItem( 'couponlist', JSON.stringify(datastructure) );
+				};
+
+		        var buttonDiv = document.getElementById("confirmationButtons");
+
+				buttonDiv.appendChild(btn1);
+
 			}
 
 		</script>   
-
-
-
 
 	</div><!-- /content -->
 
