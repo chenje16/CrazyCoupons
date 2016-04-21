@@ -96,7 +96,7 @@ body {
 }
 
 .inputfile + label {
-    font-size: 1.25em;
+    font-size: 16px;
     font-weight: 700;
     color: #505050;
     background-color: white;
