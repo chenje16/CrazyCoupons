@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>My Page</title> 
+	<title>Crazy Coupons</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -61,26 +61,26 @@
 	</script>
 
 </head> 
-<body id="mainpage" style="background-image: url("background.jpg")"> 
+<body id="mainpage" style="white-space: nowrap;"> 
 
 <div data-role="page">
 
 	<div data-role="header">
-		<a href="information.html" data-transition="slide" data-icon="info" class="ui-btn-right" style="background: #FFFFFF; color: #505050; font-size: 12px; text-shadow: none">Information</a>
-		<h1>Crazy Coupons</h1>
-		<a href="options.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left" style="background: #FFFFFF; color: #505050; font-size: 12px; text-shadow: none">Options</a>
+		<a href="information.html" data-transition="slide" data-icon="info" class="ui-btn-right" style="background: #FFFFFF; margin-top: 14px; color: #505050; font-size: 14px; text-shadow: none">Information</a>
+		<h1 style= "margin-top: 20px; font-size: 25px">Crazy Coupons</h1>
+		<a href="options.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left" style="background: #FFFFFF; margin-top: 14px; color: #505050; font-size: 14px; text-shadow: none">Options</a>
 
-		<div data-role="navbar" data-iconpos="left" data-type="horizontal" style="text-align: center">
+		<div data-role="navbar" data-iconpos="left" data-type="horizontal" style="text-align: center;" class="navbar">
 			<ul>
-				<li><a href="index.html" data-transition="fade" data-role="button" data-icon="home" style="color: #FFFFFF; text-shadow: none; font-size: 14px" data-theme="b">Home</a></li>
-				<li><a href="map.html" data-transition="fade" data-role="button" data-icon="myapp-location" style="font-size: 14px" data-theme="c">Map</a></li>
-				<li><a href="trending.html" data-transition="fade" data-role="button" data-icon="star" style="font-size: 14px" data-theme="c">Trending</a></li>
-				<li><a href="camera.html" data-transition="fade" data-role="button" data-icon="myapp-camera" style="font-size: 14px" data-theme="c">Camera</a></li>
+				<li><a href="index.html" data-transition="fade" data-role="button" data-icon="home" style="text-shadow: none; font-size: 20px; margin-top: 5px" data-theme="b">Home</a></li>
+				<li><a href="map.html" data-transition="fade" data-role="button" data-icon="myapp-location" style="font-size: 20px; margin-top: 5px" data-theme="c">Map</a></li>
+				<li><a href="trending.html" data-transition="fade" data-role="button" data-icon="star" style="font-size: 20px; margin-top: 5px" data-theme="c">Trending</a></li>
+				<li><a href="camera.html" data-transition="fade" data-role="button" data-icon="myapp-camera" style="font-size: 20px; margin-top: 5px" data-theme="c">Camera</a></li>
 			</ul>
 		</div>		
 	</div><!-- /header -->
 
-	<div data-role="content" style="white-space: nowrap">	
+	<div data-role="content" style="white-space: nowrap;">	
 
 		<form>
 			<div class="ui-field-contain">
@@ -97,27 +97,27 @@
 
 		<ul data-role="listview" data-inset="true" data-filter="true" style="padding: 10px;">
 			<li><a href="coupons.html" onclick="addtoJson()" rel="external">
-				<img src="../logos/CVS-Pharmacy.jpg" style="padding-top: 20px; padding-left: 10px"></img>
+				<img src="logos/CVS-Pharmacy.jpg" style="padding-top: 20px; padding-left: 10px"></img>
 				<h2 class="discount">$2.00 ExtraBucks</h2>
 				<h3 class="ui-li-aside expdate">5/13/16</h3>
 			</a></li>
 			<li><a href="#">
-				<img src="../logos/Macy's.png" style="padding-top: 30px; padding-left: 10px"></img>
+				<img src="logos/Macy's.png" style="padding-top: 30px; padding-left: 10px"></img>
 				<h2 class="discount">50% Off Sale</h2>
 				<h3 class="ui-li-aside expdate">5/15/16</h3>
 			</a></li>
 			<li><a href="#">
-				<img src="../logos/BestBuy.png" style="padding-top: 15px; padding-left: 10px"></img>
+				<img src="logos/BestBuy.png" style="padding-top: 15px; padding-left: 10px"></img>
 				<h2 class="discount">$10 Off Your $50 Purchase</h2>
 				<h3 class="ui-li-aside expdate">5/20/16</h3>
 			</a></li>
 			<li><a href="#">
-				<img src="../logos/ElJefe.png" style="padding-left: 10px"></img>
+				<img src="logos/ElJefe.png" style="padding-left: 10px"></img>
 				<h2 class="discount">Free Burrito</h2>
 				<h3 class="ui-li-aside expdate">5/22/16</h3>
 			</a></li>
 			<li><a href="#">
-				<img src="../logos/Gyotaku.png" style="padding-left: 5px"></img>
+				<img src="logos/Gyotaku.png" style="padding-left: 5px"></img>
 				<h2 class="discount">Complimentary Side Dish</h2>
 				<h3 class="ui-li-aside expdate">5/30/16</h3>
 			</a></li>

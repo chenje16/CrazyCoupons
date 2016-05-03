@@ -37,16 +37,17 @@
 <div data-role="page" id="camera">
 
 	<div data-role="header">
-		<a href="camerainfo.html" data-transition="slide" data-icon="info" class="ui-btn-right" style="background: #FFFFFF; color: #505050; font-size: 12px; text-shadow: none">Information</a>
-		<h1>Camera</h1>
-		<a href="options4.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left" style="background: #FFFFFF; color: #505050; font-size: 12px; text-shadow: none">Options</a>
+		<a href="information.html" data-transition="slide" data-icon="info" class="ui-btn-right" style="background: #FFFFFF; margin-top: 14px; color: #505050; font-size: 14px; text-shadow: none">Information</a>
+		<h1 style= "margin-top: 20px; font-size: 25px">Camera</h1>
+		<a href="options.html" data-transition="slide" data-direction="reverse" data-icon="gear" class="ui-btn-left" style="background: #FFFFFF; margin-top: 14px; color: #505050; font-size: 14px; text-shadow: none">Options</a>
 
-		<div data-role="navbar" data-iconpos="left" data-type="horizontal" style="text-align: center">
+
+		<div data-role="navbar" data-iconpos="left" data-type="horizontal" style="text-align: center;" class="navbar">
 			<ul>
-				<li><a href="index.html" data-transition="fade" data-role="button" data-icon="home" style="font-size: 14px" data-theme="c">Home</a></li>
-				<li><a href="map.html" data-transition="fade" data-role="button" data-icon="myapp-location" style="font-size: 14px" data-theme="c">Map</a></li>
-				<li><a href="trending.html" data-transition="fade" data-role="button" data-icon="star" style="font-size: 14px" data-theme="c">Trending</a></li>
-				<li><a href="camera.html" data-transition="fade" data-role="button" data-icon="myapp-camera" style="color: #FFFFFF; text-shadow: none; font-size: 14px" data-theme="b">Camera</a></li>
+				<li><a href="index.html" data-transition="fade" data-role="button" data-icon="home" style="color: #FFFFFF; text-shadow: none; font-size: 20px; margin-top: 5px" data-theme="b">Home</a></li>
+				<li><a href="map.html" data-transition="fade" data-role="button" data-icon="myapp-location" style="font-size: 20px; margin-top: 5px" data-theme="c">Map</a></li>
+				<li><a href="trending.html" data-transition="fade" data-role="button" data-icon="star" style="font-size: 20px; margin-top: 5px" data-theme="c">Trending</a></li>
+				<li><a href="camera.html" data-transition="fade" data-role="button" data-icon="myapp-camera" style="font-size: 20px; margin-top: 5px" data-theme="c">Camera</a></li>
 			</ul>
 		</div>		
 	</div><!-- /header -->
@@ -56,11 +57,11 @@
 		<input type="file" name="takePictureField" capture="camera" accept="image/*" id="takePictureField" class="inputfile" />
 		<label for="takePictureField" style="text-align: center; vertical-align: middle">Get Coupon Pic</label>
 
-        <div style="position:relative; height: 500px; width: 500px; vertical-align: middle; margin-left:auto; margin-right:auto; padding-top: 20px">
+        <div style="position:relative; height: 500px; width: 500px; vertical-align: middle; margin-left:auto; margin-right:auto; padding-top: 20px" class="coupondiv">
 			<img id="yourimage" class="couponimg"/>
 		</div>
 
-		<div id="confirmationButtons"></div>
+		<a href="index.html" id="confirmationButton" data-role="button" style="visibility:hidden">Add to My Coupons</a> 
 
 		<script>
 			var desiredWidth;
@@ -77,6 +78,8 @@
 
 			$.fn.photoResize = function (options) {
 
+
+				
 				var element	= $(this), 
 					defaults = {
 			            bottomSpacing: 10
@@ -93,10 +96,10 @@
 				options = $.extend(defaults, options);
 
 				function updatePhotoHeight() {
-					var o = options, 
-						photoHeight = $(window).height();
-
-					$(element).attr('height', photoHeight - o.bottomSpacing);
+					$(element).attr('height', "400px");
+					$(element).attr('position', "relative");
+					$(element).attr('top', "50%");
+					$(element).attr('transform', 'translateY(-50%)');
 				}
 			};
 			
@@ -107,10 +110,12 @@
 		            $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
 		        	$("#yourimage").photoResize();
 		        }
-
+		        var buttonDiv = document.getElementById("confirmationButtons");
+		        $("#confirmationButton").attr("style", "visibility: visible");
+		        /*
 		        var btn1 = document.createElement("BUTTON");
 		        $(btn1).attr("class", "camerapagebutton");
-		        $(btn1).attr("style", "vertical-align: middle; margin-left:auto; margin-right:auto; margin-bottom: 10px; margin-top: 20px");
+		        $(btn1).attr("style", "position: relative; top: 50%, transform: translateY(-50%)");
 				var t1 = document.createTextNode("Add to Coupons");     
 				btn1.appendChild(t1); 
 				btn1.onclick = function() { 
@@ -130,12 +135,14 @@
 					datastructure.push(newcoupon)
 					console.log(datastructure)
 					localStorage.setItem( 'couponlist', JSON.stringify(datastructure) );
+
+					window.location.href = "index.html";
 				};
 
 		        var buttonDiv = document.getElementById("confirmationButtons");
 
 				buttonDiv.appendChild(btn1);
-
+				*/
 			}
 
 		</script>   

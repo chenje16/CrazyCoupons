@@ -18,6 +18,15 @@ body {
   	margin-right:auto;
 }
 
+#coupondiv{
+    width: 300px;
+    height: 400px;
+}
+#coupondiv img{
+    width: 300px;
+    height: 400px;
+}
+
 #first{
     float: left;
     width: 20%;
@@ -26,6 +35,10 @@ body {
 #second{
     float: left;
     width: 400px;
+}
+
+#navbar{
+	height: 100px
 }
 
 .ui-mobile-viewport{
@@ -50,14 +63,13 @@ body {
 }
 
 .ui-header{
-	background:#006699;
+	background:#005B9A;
 }
 
 .ui-page{
-	background: transparent url("background.jpg");
 	background-size: 200% 100%;
 	background-repeat: no-repeat;
-	background-color: white;
+	background-color:#74C2E1;
 }
 
 .ui-icon-myapp-location{
@@ -124,9 +136,4 @@ body {
 
 .inputfile + label * {
 	pointer-events: none;
-}
-
-img.couponimg {
-	margin-left: auto;
-    margin-right: auto;
 }
